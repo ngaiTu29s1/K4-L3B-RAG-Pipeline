@@ -13,7 +13,7 @@
 
 | STT | Họ và tên | Mã học viên | Vai trò | Nhánh phụ trách | Phần việc đảm nhiệm chính |
 | :---: | :--- | :---: | :--- | :---: | :--- |
-| 1 | **Trần Tuấn Tú** | `2A202602840` | Full-stack RAG Engineer / Trưởng nhóm | `main` | Chịu trách nhiệm toàn bộ quy trình Pipeline end-to-end từ Task 1 đến Task 14 |
+| 1 | **Trần Tuấn Tú** | `2A202602840` | Full-stack RAG Engineer / Trưởng nhóm | `main` | Chịu trách nhiệm toàn bộ quy trình Pipeline end-to-end từ Task 1 đến Task 10 |
 
 ---
 
