@@ -1,4 +1,6 @@
+import asyncio
 import inspect
+import json
 
 import pytest
 
@@ -7,6 +9,73 @@ from src.contracts import (
     validate_generation_result,
     validate_search_results,
 )
+
+
+def test_data_dragon_download_pins_version_and_writes_catalogs(tmp_path, monkeypatch):
+    import src.task1_collect_legal_docs as task1
+
+    calls = []
+
+    def fake_fetch(url):
+        calls.append(url)
+        return ["26.19.1"] if url == task1.VERSIONS_URL else {"data": {"fixture": {}}}
+
+    monkeypatch.setattr(task1, "DATA_DIR", tmp_path)
+    monkeypatch.setattr(task1, "_fetch_json", fake_fetch)
+
+    task1.download_documents()
+    assert json.loads((tmp_path / "ddragon_version.json").read_text())["version"] == "26.19.1"
+    assert set(task1.CATALOGS) <= {path.name for path in tmp_path.iterdir()}
+
+    calls.clear()
+    task1.download_documents()
+    assert task1.VERSIONS_URL not in calls
+
+
+def test_patch_crawler_returns_grounded_metadata():
+    from src.task2_crawl_news import crawl_article
+
+    class Result:
+        success = True
+        markdown = "# League of Legends Patch 26.19 Notes\n\n## Champions\n\n### Aatrox"
+        metadata = {"title": "League of Legends Patch 26.19 Notes"}
+        error_message = ""
+
+    class Crawler:
+        async def arun(self, *, url):
+            return Result()
+
+    url = (
+        "https://www.leagueoflegends.com/en-us/news/game-updates/"
+        "league-of-legends-patch-26-19-notes/"
+    )
+    article = asyncio.run(crawl_article(Crawler(), "26.19", url))
+    assert article["url"] == url
+    assert article["patch"] == "26.19"
+    assert article["source_tier"] == "official"
+    assert article["content_markdown"].startswith("# League of Legends")
+
+
+def test_patch_parser_separates_summoners_rift_entries():
+    from src.task3_convert_markdown import PATCH_SECTIONS, _entries, _top_sections
+
+    markdown = """## Champions
+### [Aatrox](https://example.com/aatrox)
+SR change
+#### Q - The Darkin Blade
+More SR detail
+## Classic
+### Aatrox
+Classic-only change
+## Arena
+### Aatrox
+Arena-only change
+"""
+    sections = _top_sections(markdown)
+    titles = [title for title, _ in _entries(sections["Champions"], "Champions")]
+
+    assert titles == ["[Aatrox](https://example.com/aatrox)"]
+    assert {name for name in sections if name in PATCH_SECTIONS} == {"Champions"}
 
 
 def metadata(source: str = "tuition.md", chunk_index: int = 0) -> dict:
@@ -117,6 +186,9 @@ def test_semantic_search_uses_shared_embedding_and_contract(monkeypatch):
     import src.task5_semantic_search as semantic
 
     class FakeCollection:
+        def count(self):
+            return 2
+
         def query(self, **kwargs):
             assert kwargs["query_embeddings"] == [[0.1, 0.2]]
             return {
@@ -126,7 +198,11 @@ def test_semantic_search_uses_shared_embedding_and_contract(monkeypatch):
                 "distances": [[0.1, 0.4]],
             }
 
-    monkeypatch.setattr(semantic, "embed_texts", lambda texts: [[0.1, 0.2]])
+    def fake_embed(texts, **kwargs):
+        assert kwargs == {"task_type": "RETRIEVAL_QUERY"}
+        return [[0.1, 0.2]]
+
+    monkeypatch.setattr(semantic, "embed_texts", fake_embed)
     monkeypatch.setattr(semantic, "get_collection", lambda: FakeCollection())
     output = semantic.semantic_search("tuition", top_k=2)
     validate_search_results(output, top_k=2, expected_method="dense")
@@ -145,6 +221,11 @@ def test_lexical_search_returns_bm25_contract(monkeypatch):
             "id": "chunk-1",
             "content": "library opening hours",
             "metadata": metadata(source="library.md", chunk_index=1),
+        },
+        {
+            "id": "chunk-2",
+            "content": "student housing application",
+            "metadata": metadata(source="housing.md", chunk_index=2),
         },
     ]
     monkeypatch.setattr(lexical, "CORPUS", corpus)
@@ -167,6 +248,29 @@ def test_rrf_uses_rank_deduplicates_and_marks_hybrid():
     assert [item["id"] for item in fused][0] == "chunk-1"
     expected = 1 / 62 + 1 / 61
     assert fused[0]["score"] == pytest.approx(expected)
+
+
+def test_pageindex_nodes_are_mapped_to_search_results():
+    from src.task8_pageindex_vectorless import _parse_nodes
+
+    nodes = [
+        {
+            "node_id": "42",
+            "title": "Volibear Patch 26.19",
+            "relevant_contents": [
+                [
+                    {
+                        "relevant_content": "news/patch__26_19__champion__volibear.md\nQ damage increased"
+                    }
+                ]
+            ],
+        }
+    ]
+    output = _parse_nodes("doc-1", nodes, top_k=1)
+
+    validate_search_results(output, top_k=1, expected_method="pageindex")
+    assert output[0]["metadata"]["source"].startswith("news/")
+    assert output[0]["content"].endswith("Q damage increased")
 
 
 def test_reorder_is_non_mutating_and_context_contains_source():
@@ -253,3 +357,41 @@ def test_generation_result_validator_accepts_safe_refusal():
             "retrieval_source": "none",
         }
     )
+
+
+def test_generation_checks_citations_and_survives_provider_error(monkeypatch):
+    import src.task10_generation as generation
+
+    chunks = [result("chunk-0", 0.03, "hybrid")]
+    monkeypatch.setattr(generation, "retrieve", lambda query, top_k: chunks)
+    monkeypatch.setattr(
+        generation,
+        "call_llm",
+        lambda system_prompt, user_message: "Học phí theo học kỳ [chunk-0].",
+    )
+    output = generation.generate_with_citation("Học phí thế nào?", top_k=1)
+    validate_generation_result(output)
+    assert output["sources"] == chunks
+    assert output["retrieval_source"] == "hybrid"
+
+    monkeypatch.setattr(
+        generation,
+        "call_llm",
+        lambda system_prompt, user_message: "Thông tin không có nguồn [chunk-999].",
+    )
+    assert generation.generate_with_citation("Học phí thế nào?", top_k=1)[
+        "retrieval_source"
+    ] == "none"
+
+    def unavailable(system_prompt, user_message):
+        raise RuntimeError("provider unavailable")
+
+    monkeypatch.setattr(generation, "call_llm", unavailable)
+    assert generation.generate_with_citation("Học phí thế nào?", top_k=1)[
+        "answer"
+    ] == generation.SAFE_REFUSAL
+
+    monkeypatch.setattr(generation, "retrieve", lambda query, top_k: unavailable(None, None))
+    assert generation.generate_with_citation("Học phí thế nào?", top_k=1)[
+        "retrieval_source"
+    ] == "none"

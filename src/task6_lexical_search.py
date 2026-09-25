@@ -1,48 +1,65 @@
-"""
-Task 6 — Lexical search bằng BM25.
+"""Task 6 — BM25 lexical search over the Task 4 chunks."""
 
-Dùng cùng corpus chunks với Task 5. BM25 phù hợp với từ khóa chính xác, mã tài
-liệu và tên riêng. Output phải theo SearchResult và sort score giảm dần.
-"""
+import re
+
+from .contracts import validate_search_results
+from .task4_chunking_indexing import get_collection
 
 
-CORPUS: list[dict] = []
+CORPUS: list[dict] | None = None
+
+
+def _tokenize(text: str) -> list[str]:
+    return re.findall(r"\w+", text.lower())
+
+
+def _get_corpus() -> list[dict]:
+    global CORPUS
+    if CORPUS is None:
+        stored = get_collection().get(include=["documents", "metadatas"])
+        CORPUS = [
+            {"id": item_id, "content": content, "metadata": metadata}
+            for item_id, content, metadata in zip(
+                stored["ids"], stored["documents"] or [], stored["metadatas"] or []
+            )
+        ]
+    return CORPUS
 
 
 def build_bm25_index(corpus: list[dict]):
-    """Tạo BM25 index từ cùng corpus chunks của Task 4."""
-    # TODO: Tokenize và tạo BM25 index.
-    #
-    # from rank_bm25 import BM25Okapi
-    # tokenized = [item["content"].lower().split() for item in corpus]
-    # return BM25Okapi(tokenized)
-    raise NotImplementedError("Implement build_bm25_index")
+    """Create a BM25 index from Task 4 chunks."""
+    from rank_bm25 import BM25Okapi
+
+    if not corpus:
+        raise ValueError("Cannot build BM25 index from an empty corpus")
+    return BM25Okapi([_tokenize(item["content"]) for item in corpus])
 
 
 def lexical_search(query: str, top_k: int = 10) -> list[dict]:
-    """Trả về BM25 SearchResult theo score giảm dần."""
-    # TODO: Tính BM25 scores và map lại corpus.
-    #
-    # import numpy as np
-    # bm25 = build_bm25_index(CORPUS)
-    # scores = bm25.get_scores(query.lower().split())
-    # indices = np.argsort(scores)[::-1][:top_k]
-    # results = []
-    # for index in indices:
-    #     if scores[index] <= 0:
-    #         continue
-    #     item = CORPUS[index]
-    #     results.append({
-    #         "id": item["id"],
-    #         "content": item["content"],
-    #         "score": float(scores[index]),
-    #         "metadata": item["metadata"],
-    #         "retrieval_method": "bm25",
-    #     })
-    # return results
-    raise NotImplementedError("Implement lexical_search")
+    """Return BM25 SearchResult items sorted by descending score."""
+    if not isinstance(query, str) or not query.strip() or top_k <= 0:
+        return []
+
+    corpus = _get_corpus()
+    if not corpus:
+        return []
+    scores = build_bm25_index(corpus).get_scores(_tokenize(query))
+    indices = sorted(range(len(corpus)), key=scores.__getitem__, reverse=True)
+    results = [
+        {
+            "id": corpus[index]["id"],
+            "content": corpus[index]["content"],
+            "score": float(scores[index]),
+            "metadata": corpus[index]["metadata"],
+            "retrieval_method": "bm25",
+        }
+        for index in indices[:top_k]
+        if scores[index] > 0
+    ]
+    validate_search_results(results, top_k=top_k, expected_method="bm25")
+    return results
 
 
 if __name__ == "__main__":
-    for result in lexical_search("test query", top_k=3):
-        print(result)
+    for result in lexical_search("Volibear patch 26.19", top_k=3):
+        print(result["score"], result["metadata"]["title"])

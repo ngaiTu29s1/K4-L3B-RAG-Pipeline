@@ -44,6 +44,10 @@ data/_tmp_pdf/
 *.log
 pageindex_doc_ids.json
 pageindex_pdfs/
+chroma_db/
+
+# Local handoff notes
+.handoff/
 
 # Jupyter
 .ipynb_checkpoints/
