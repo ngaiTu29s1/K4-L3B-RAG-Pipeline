@@ -1,0 +1,382 @@
+[
+  {
+    "case_id": 1,
+    "question": "Nội tại Hút Hồn của Ahri hoạt động như thế nào?",
+    "config": "hybrid+rrf",
+    "is_ood": false,
+    "retrieved_chunk_ids": [
+      "legal/champion__ahri.md::chunk-3",
+      "legal/champion__ahri.md::chunk-1",
+      "legal/champion__nasus.md::chunk-5",
+      "legal/champion__ahri.md::chunk-0",
+      "legal/champion__ahri.md::chunk-5"
+    ],
+    "answer": "Nội tại Hút Hồn của Ahri giúp cô được hồi máu sau khi hạ 9 lính hoặc quái, và được hồi máu nhiều hơn khi tham gia hạ gục tướng [legal/champion__ahri.md::chunk-3].",
+    "faithfulness": 0.9412,
+    "answer_relevance": 0.7083,
+    "context_recall": 1.0,
+    "context_precision": 0.95,
+    "average": 0.8999
+  },
+  {
+    "case_id": 2,
+    "question": "Chiêu cuối R Trăng Trối của Yasuo có tác dụng gì và thời gian hồi chiêu là bao lâu?",
+    "config": "hybrid+rrf",
+    "is_ood": false,
+    "retrieved_chunk_ids": [
+      "legal/champion__yasuo.md::chunk-5",
+      "legal/champion__diana.md::chunk-5",
+      "legal/champion__yasuo.md::chunk-3",
+      "legal/champion__alistar.md::chunk-5",
+      "legal/champion__renekton.md::chunk-8"
+    ],
+    "answer": "Chiêu cuối R — Trăng Trối của Yasuo giúp dịch chuyển đến chỗ một tướng địch đang bị Hất Lên Không, gây sát thương vật lý, giữ những kẻ địch bị Hất Lên Không ở xung quanh trên không thêm một chút, hồi đầy thanh Nhịp nhưng xóa hết cộng dồn của Tụ Bão, và giúp các đòn chí mạng nhận một lượng lớn Xuyên Giáp Cộng Thêm trong một khoảng thời gian sau đó [legal/champion__yasuo.md::chunk-5]. \n\nThời gian hồi chiêu của kỹ năng này là 70/50/30 giây [legal/champion__yasuo.md::chunk-5].",
+    "faithfulness": 0.9301,
+    "answer_relevance": 0.8702,
+    "context_recall": 1.0,
+    "context_precision": 1.0,
+    "average": 0.9501
+  },
+  {
+    "case_id": 3,
+    "question": "Nội tại Đường Kiếm Tuyệt Diệt của Aatrox có tác dụng gì?",
+    "config": "hybrid+rrf",
+    "is_ood": false,
+    "retrieved_chunk_ids": [
+      "legal/champion__aatrox.md::chunk-5",
+      "legal/champion__aatrox.md::chunk-6",
+      "legal/champion__aatrox.md::chunk-7",
+      "legal/champion__aatrox.md::chunk-0",
+      "legal/champion__nocturne.md::chunk-3"
+    ],
+    "answer": "Nội tại Đường Kiếm Tuyệt Diệt của Aatrox giúp đòn đánh kế tiếp (thường kỳ) gây thêm sát thương phép và hồi máu dựa trên máu tối đa của mục tiêu [legal/champion__aatrox.md::chunk-5].",
+    "faithfulness": 0.9571,
+    "answer_relevance": 0.7857,
+    "context_recall": 1.0,
+    "context_precision": 0.95,
+    "average": 0.9232
+  },
+  {
+    "case_id": 4,
+    "question": "Hiệu ứng đòn đánh chí mạng trong nội tại Băng Tiễn của Ashe hoạt động như thế nào?",
+    "config": "hybrid+rrf",
+    "is_ood": false,
+    "retrieved_chunk_ids": [
+      "legal/champion__ashe.md::chunk-3",
+      "legal/champion__ashe.md::chunk-4",
+      "legal/item__2512.md::chunk-1",
+      "legal/champion__ashe.md::chunk-5",
+      "legal/item__3032.md::chunk-1"
+    ],
+    "answer": "Các đòn chí mạng của Ashe không gây thêm sát thương nhưng sẽ làm mục tiêu bị chậm hơn nhiều [legal/champion__ashe.md::chunk-3].",
+    "faithfulness": 0.9375,
+    "answer_relevance": 0.8,
+    "context_recall": 1.0,
+    "context_precision": 1.0,
+    "average": 0.9344
+  },
+  {
+    "case_id": 5,
+    "question": "Trang bị Vô Cực Kiếm cung cấp những chỉ số gì và giá mua là bao nhiêu?",
+    "config": "hybrid+rrf",
+    "is_ood": false,
+    "retrieved_chunk_ids": [
+      "legal/item__3031.md::chunk-0",
+      "legal/item__3033.md::chunk-1",
+      "legal/champion__veigar.md::chunk-3",
+      "legal/item__6676.md::chunk-1",
+      "legal/item__663064.md::chunk-0"
+    ],
+    "answer": "Vô Cực Kiếm cung cấp các chỉ số: 75 Sức Mạnh Công Kích, 25% Tỉ Lệ Chí Mạng và 30% Sát Thương Chí Mạng (FlatCritChanceMod: 0.25, FlatPhysicalDamageMod: 75) [legal/item__3031.md::chunk-0]. Giá mua trang bị này là 3500 vàng [legal/item__3031.md::chunk-0].",
+    "faithfulness": 0.9,
+    "answer_relevance": 0.7302,
+    "context_recall": 1.0,
+    "context_precision": 0.8875,
+    "average": 0.8794
+  },
+  {
+    "case_id": 6,
+    "question": "Chỉ số và nội tại của trang bị Mũ Phù Thủy Rabadon là gì?",
+    "config": "hybrid+rrf",
+    "is_ood": false,
+    "retrieved_chunk_ids": [
+      "legal/item__3089.md::chunk-0",
+      "legal/item__326657.md::chunk-2",
+      "legal/champion__leblanc.md::chunk-1",
+      "legal/item__6657.md::chunk-2",
+      "legal/champion__lissandra.md::chunk-1"
+    ],
+    "answer": "Mũ Phù Thủy Rabadon có chỉ số `FlatMagicDamageMod` là 130 và nội tại Tinh Hoa Phép Thuật giúp tăng tổng Sức Mạnh Phép Thuật thêm 30% [legal/item__3089.md::chunk-0].",
+    "faithfulness": 0.9167,
+    "answer_relevance": 0.7407,
+    "context_recall": 1.0,
+    "context_precision": 1.0,
+    "average": 0.9143
+  },
+  {
+    "case_id": 7,
+    "question": "Trang bị Đồng Hồ Cát Zhonya có những chỉ số nào và kích hoạt Ngưng Đọng kéo dài bao lâu?",
+    "config": "hybrid+rrf",
+    "is_ood": false,
+    "retrieved_chunk_ids": [
+      "legal/item__3157.md::chunk-0",
+      "legal/item__6333.md::chunk-1",
+      "legal/champion__thresh.md::chunk-5",
+      "legal/item__4629.md::chunk-1",
+      "legal/item__2420.md::chunk-0"
+    ],
+    "answer": "Đồng Hồ Cát Zhonya có các chỉ số là 105 Sức Mạnh Phép Thuật và 50 Giáp [legal/item__3157.md::chunk-0]. Trạng thái Ngưng Đọng kéo dài 2.5 giây [legal/item__3157.md::chunk-0].",
+    "faithfulness": 0.8971,
+    "answer_relevance": 0.625,
+    "context_recall": 1.0,
+    "context_precision": 0.8875,
+    "average": 0.8524
+  },
+  {
+    "case_id": 8,
+    "question": "Trang bị Tam Hợp Kiếm có giá mua bao nhiêu và mang lại những chỉ số gì?",
+    "config": "hybrid+rrf",
+    "is_ood": false,
+    "retrieved_chunk_ids": [
+      "legal/item__3078.md::chunk-0",
+      "legal/item__3078.md::chunk-1",
+      "legal/champion__tryndamere.md::chunk-7",
+      "legal/item__3146.md::chunk-1",
+      "legal/champion__tahmkench.md::chunk-2"
+    ],
+    "answer": "Trang bị Tam Hợp Kiếm có giá mua là 3333 vàng [legal/item__3078.md::chunk-1]. Trang bị này mang lại các chỉ số: 36 Sức Mạnh Công Kích (FlatPhysicalDamageMod), 30% Tốc Độ Đánh (PercentAttackSpeedMod), 333 Máu (FlatHPPoolMod), 15 Điểm Hồi Kỹ Năng, nội tại Kiếm Phép gây thêm sát thương vật lý sau khi dùng kỹ năng, và nội tại Nhanh Lẹ tăng 20 Tốc Độ Di Chuyển trong 2 giây [legal/item__3078.md::chunk-0], [legal/item__3078.md::chunk-1].",
+    "faithfulness": 0.8861,
+    "answer_relevance": 0.5714,
+    "context_recall": 1.0,
+    "context_precision": 1.0,
+    "average": 0.8644
+  },
+  {
+    "case_id": 9,
+    "question": "Phép bổ trợ Tốc Biến có thời gian hồi chiêu và tầm sử dụng là bao nhiêu?",
+    "config": "hybrid+rrf",
+    "is_ood": false,
+    "retrieved_chunk_ids": [
+      "legal/spell__summonerflash.md::chunk-0",
+      "legal/item__3171.md::chunk-1",
+      "legal/spell__summonerhaste.md::chunk-0",
+      "legal/champion__zoe.md::chunk-6",
+      "legal/champion__riven.md::chunk-5"
+    ],
+    "answer": "Tốc Biến có thời gian hồi chiêu là 300 và tầm sử dụng là 425 [legal/spell__summonerflash.md::chunk-0].",
+    "faithfulness": 0.8684,
+    "answer_relevance": 0.5,
+    "context_recall": 1.0,
+    "context_precision": 1.0,
+    "average": 0.8421
+  },
+  {
+    "case_id": 10,
+    "question": "Phép bổ trợ Dịch Chuyển có thời gian hồi chiêu và tầm sử dụng bao nhiêu theo Riot Data Dragon?",
+    "config": "hybrid+rrf",
+    "is_ood": false,
+    "retrieved_chunk_ids": [
+      "legal/spell__summonerteleport.md::chunk-0",
+      "legal/item__3171.md::chunk-1",
+      "legal/spell__summonerflash.md::chunk-0",
+      "legal/champion__zoe.md::chunk-6",
+      "legal/spell__summonerhaste.md::chunk-0"
+    ],
+    "answer": "Phép bổ trợ Dịch Chuyển có thời gian hồi chiêu là 300 và tầm sử dụng là 25000 [legal/spell__summonerteleport.md::chunk-0].",
+    "faithfulness": 0.8864,
+    "answer_relevance": 0.8108,
+    "context_recall": 1.0,
+    "context_precision": 1.0,
+    "average": 0.9243
+  },
+  {
+    "case_id": 11,
+    "question": "Phép bổ trợ Thiêu Đốt có tác dụng gì và thời gian hồi chiêu là bao nhiêu?",
+    "config": "hybrid+rrf",
+    "is_ood": false,
+    "retrieved_chunk_ids": [
+      "legal/spell__summonerdot.md::chunk-0",
+      "legal/champion__locke.md::chunk-4",
+      "legal/champion__brand.md::chunk-7",
+      "legal/champion__zoe.md::chunk-6",
+      "legal/champion__brand.md::chunk-8"
+    ],
+    "answer": "Thiêu Đốt gây sát thương chuẩn theo thời gian lên một tướng địch và giảm hiệu quả hồi máu của chúng trong thời gian tác dụng [legal/spell__summonerdot.md::chunk-0]. Thời gian hồi chiêu của Thiêu Đốt là 180 [legal/spell__summonerdot.md::chunk-0].",
+    "faithfulness": 0.9302,
+    "answer_relevance": 0.8667,
+    "context_recall": 1.0,
+    "context_precision": 1.0,
+    "average": 0.9492
+  },
+  {
+    "case_id": 12,
+    "question": "Patch 26.15 thay đổi chiêu Q Thundering Smash của Volibear như thế nào?",
+    "config": "hybrid+rrf",
+    "is_ood": false,
+    "retrieved_chunk_ids": [
+      "news/patch__26_15__champion__volibear.md::chunk-1",
+      "news/patch__26_15__champion__volibear.md::chunk-0",
+      "news/patch__26_15__champion__maokai.md::chunk-2",
+      "legal/champion__volibear.md::chunk-7",
+      "news/patch__26_19__champion__volibear.md::chunk-1"
+    ],
+    "answer": "Trong Patch 26.15, chiêu Q (Thundering Smash) của Volibear có thời gian hồi chiêu (Cooldown) được thay đổi từ 14 / 13 / 12 / 11 / 10 thành 12 / 11.5 / 11 / 10.5 / 10 [news/patch__26_15__champion__volibear.md::chunk-1].",
+    "faithfulness": 0.9,
+    "answer_relevance": 0.75,
+    "context_recall": 1.0,
+    "context_precision": 0.8333,
+    "average": 0.8708
+  },
+  {
+    "case_id": 13,
+    "question": "Chỉ số Sức mạnh Thích ứng của ngọc Jack of All Trades bị thay đổi ra sao trong Patch 26.15?",
+    "config": "hybrid+rrf",
+    "is_ood": false,
+    "retrieved_chunk_ids": [
+      "news/patch__26_15__rune__jack-of-all-trades.md::chunk-0",
+      "news/patch__26_15__champion__sylas.md::chunk-0",
+      "news/patch__26_15__rune__jack-of-all-trades.md::chunk-1",
+      "news/patch__26_17__item__sundered-sky.md::chunk-1",
+      "news/patch__26_15__champion__mordekaiser.md::chunk-1"
+    ],
+    "answer": "Trong Patch 26.15, Sức mạnh Thích ứng (Adaptive Force) tại các mốc 5 / 10 chỉ số của ngọc Jack of All Trades đã thay đổi từ 10 / 25 thành **8 / 20** [news/patch__26_15__rune__jack-of-all-trades.md::chunk-1].",
+    "faithfulness": 0.7976,
+    "answer_relevance": 0.6984,
+    "context_recall": 1.0,
+    "context_precision": 0.3333,
+    "average": 0.7073
+  },
+  {
+    "case_id": 14,
+    "question": "Trang bị Rìu Đen (Black Cleaver) được chỉnh sửa sức mạnh công kích và tốc độ chạy như thế nào trong Patch 26.16?",
+    "config": "hybrid+rrf",
+    "is_ood": false,
+    "retrieved_chunk_ids": [
+      "news/patch__26_16__item__black-cleaver.md::chunk-0",
+      "legal/item__3071.md::chunk-0",
+      "legal/item__3051.md::chunk-0",
+      "news/patch__26_16__item__black-cleaver.md::chunk-1",
+      "news/patch__26_16__item__berserker-s-greaves.md::chunk-1"
+    ],
+    "answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
+    "faithfulness": 1.0,
+    "answer_relevance": 0.0,
+    "context_recall": 1.0,
+    "context_precision": 0.6792,
+    "average": 0.6698
+  },
+  {
+    "case_id": 15,
+    "question": "Patch 26.17 đã điều chỉnh tiêu hao mana chiêu Q và hồi chiêu W của Aurelion Sol như thế nào?",
+    "config": "hybrid+rrf",
+    "is_ood": false,
+    "retrieved_chunk_ids": [
+      "news/patch__26_17__champion__aurelion-sol.md::chunk-1",
+      "news/patch__26_17__champion__aurelion-sol.md::chunk-0",
+      "legal/champion__aurelionsol.md::chunk-5",
+      "news/patch__26_18__champion__ekko.md::chunk-2",
+      "legal/champion__aurelionsol.md::chunk-9"
+    ],
+    "answer": "Trong Patch 26.17, chiêu Q (Breath of Light) của Aurelion Sol được điều chỉnh tiêu hao mana mỗi giây từ 35 / 40 / 45 / 50 / 55 thành 30 / 35 / 40 / 45 / 50 [news/patch__26_17__champion__aurelion-sol.md::chunk-1]. Bản cập nhật này cũng tăng sức mạnh cho hồi chiêu W của tướng này [news/patch__26_17__champion__aurelion-sol.md::chunk-1].",
+    "faithfulness": 0.8692,
+    "answer_relevance": 0.5926,
+    "context_recall": 0.6667,
+    "context_precision": 1.0,
+    "average": 0.7821
+  },
+  {
+    "case_id": 16,
+    "question": "Thời gian duy trì cộng dồn Đòn Đánh Cuồng Nộ của Cuồng Đao Guinsoo thay đổi thế nào trong Patch 26.18?",
+    "config": "hybrid+rrf",
+    "is_ood": false,
+    "retrieved_chunk_ids": [
+      "legal/item__3124.md::chunk-0",
+      "legal/item__3124.md::chunk-1",
+      "news/patch__26_18__item__guinsoo-s-rageblade.md::chunk-0",
+      "news/patch__26_18__item__guinsoo-s-rageblade.md::chunk-1",
+      "legal/champion__kindred.md::chunk-4"
+    ],
+    "answer": "Trong Patch 26.18, thời gian duy trì cộng dồn (Seething Strike Stack Duration) của Cuồng Đao Guinsoo đã thay đổi từ 3 giây thành 4 giây [news/patch__26_18__item__guinsoo-s-rageblade.md::chunk-1].",
+    "faithfulness": 0.8485,
+    "answer_relevance": 0.6786,
+    "context_recall": 1.0,
+    "context_precision": 0.25,
+    "average": 0.6943
+  },
+  {
+    "case_id": 17,
+    "question": "Patch 26.19 thay đổi nội tại The Relentless Storm của Volibear như thế nào?",
+    "config": "hybrid+rrf",
+    "is_ood": false,
+    "retrieved_chunk_ids": [
+      "legal/champion__volibear.md::chunk-0",
+      "news/patch__26_19__champion__volibear.md::chunk-2",
+      "news/patch__26_19__champion__volibear.md::chunk-0",
+      "news/patch__26_19__champion__volibear.md::chunk-1",
+      "news/patch__26_15__champion__volibear.md::chunk-1"
+    ],
+    "answer": "Trong Patch 26.19, nội tại The Relentless Storm của Volibear có các thay đổi sau:\n\n* **Tốc độ đánh mỗi điểm cộng dồn (Attack Speed per Stack):** 5% (+3% mỗi 100 AP) đổi thành 5% (+4% mỗi 100 AP) [news/patch__26_19__champion__volibear.md::chunk-2].\n* **Sát thương sét khi đánh (Lightning On-Hit Damage):** 11 - 60 (Cấp 1-18) (+45% AP) đổi thành 11 - 60 (Cấp 1-18) (+45% AP) (+20% SMCK cộng thêm) [news/patch__26_19__champion__volibear.md::chunk-2].",
+    "faithfulness": 0.7763,
+    "answer_relevance": 0.6813,
+    "context_recall": 1.0,
+    "context_precision": 0.5,
+    "average": 0.7394
+  },
+  {
+    "case_id": 18,
+    "question": "Thời gian hồi chiêu của Dịch Chuyển (Teleport) trong nhiệm vụ vai trò đường trên thay đổi như thế nào ở Patch 26.19?",
+    "config": "hybrid+rrf",
+    "is_ood": false,
+    "retrieved_chunk_ids": [
+      "news/patch__26_19__system__teleport-cooldown.md::chunk-1",
+      "legal/champion__zoe.md::chunk-2",
+      "legal/spell__summonerteleport.md::chunk-0",
+      "legal/champion__shen.md::chunk-1",
+      "news/patch__26_19__system__teleport-cooldown.md::chunk-2"
+    ],
+    "answer": "Trong Patch 26.19, thời gian hồi chiêu của Dịch Chuyển trong nhiệm vụ vai trò đường trên thay đổi như sau:\n* Dịch Chuyển miễn phí thay đổi từ 420 giây thành 390 giây [news/patch__26_19__system__teleport-cooldown.md::chunk-2].\n* Dịch Chuyển Giải Phóng nâng cấp thay đổi từ 330 - 240 giây thành 300 - 210 giây [news/patch__26_19__system__teleport-cooldown.md::chunk-2].",
+    "faithfulness": 0.8667,
+    "answer_relevance": 0.4722,
+    "context_recall": 1.0,
+    "context_precision": 0.7556,
+    "average": 0.7736
+  },
+  {
+    "case_id": 19,
+    "question": "Công thức nấu phở bò Hà Nội chuẩn vị truyền thống gồm những nguyên liệu gì?",
+    "config": "hybrid+rrf",
+    "is_ood": true,
+    "retrieved_chunk_ids": [
+      "news/patch__26_15__system__apex-duo-restrictions.md::chunk-1",
+      "legal/champion__belveth.md::chunk-2",
+      "news/patch__26_18__champion__syndra.md::chunk-1",
+      "legal/champion__ivern.md::chunk-1",
+      "legal/item__1054.md::chunk-1"
+    ],
+    "answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
+    "faithfulness": 1.0,
+    "answer_relevance": 1.0,
+    "context_recall": 1.0,
+    "context_precision": 1.0,
+    "average": 1.0
+  },
+  {
+    "case_id": 20,
+    "question": "Lãi suất tiền gửi tiết kiệm ngân hàng kỳ hạn 12 tháng hiện nay là bao nhiêu?",
+    "config": "hybrid+rrf",
+    "is_ood": true,
+    "retrieved_chunk_ids": [
+      "legal/item__663056.md::chunk-1",
+      "legal/champion__sivir.md::chunk-2",
+      "legal/item__3600.md::chunk-1",
+      "legal/champion__tryndamere.md::chunk-7",
+      "legal/champion__amumu.md::chunk-1"
+    ],
+    "answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
+    "faithfulness": 1.0,
+    "answer_relevance": 1.0,
+    "context_recall": 1.0,
+    "context_precision": 1.0,
+    "average": 1.0
+  }
+]

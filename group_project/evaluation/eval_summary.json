@@ -1,0 +1,30 @@
+{
+  "dataset_size": 20,
+  "overall_scores": {
+    "faithfulness": {
+      "dense": 0.8921,
+      "hybrid": 0.9055,
+      "delta": 0.0134
+    },
+    "answer_relevance": {
+      "dense": 0.6471,
+      "hybrid": 0.6941,
+      "delta": 0.047
+    },
+    "context_recall": {
+      "dense": 1.0,
+      "hybrid": 0.9833,
+      "delta": -0.0167
+    },
+    "context_precision": {
+      "dense": 0.8703,
+      "hybrid": 0.8513,
+      "delta": -0.019
+    },
+    "average": {
+      "dense": 0.8524,
+      "hybrid": 0.8585,
+      "delta": 0.0061
+    }
+  }
+}

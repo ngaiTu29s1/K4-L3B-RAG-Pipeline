@@ -39,7 +39,10 @@ python -m src.task3_convert_markdown
 python -m src.task4_chunking_indexing
 pytest -q
 
-# 3. Chạy sản phẩm
+# 3. Đánh giá A/B pipeline (Task 12)
+python -m src.task12_evaluation
+
+# 4. Chạy sản phẩm giao diện Chatbot
 streamlit run app.py
 ```
 

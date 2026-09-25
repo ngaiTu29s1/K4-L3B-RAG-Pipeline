@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Nội tại Hút Hồn của Ahri hoạt động như thế nào?",
+    "expected_answer": "Sau khi hạ 9 lính hoặc quái, Ahri sẽ được hồi máu. Khi tham gia hạ gục tướng địch, Ahri sẽ được hồi máu nhiều hơn.",
+    "expected_context": "## Nội tại — Hút Hồn\nSau khi hạ 9 lính hoặc quái, Ahri sẽ được hồi máu. Khi tham gia hạ gục tướng, Ahri sẽ được hồi máu nhiều hơn."
+  },
+  {
+    "question": "Chiêu cuối R Trăng Trối của Yasuo có tác dụng gì và thời gian hồi chiêu là bao lâu?",
+    "expected_answer": "Chiêu R Trăng Trối của Yasuo dịch chuyển đến chỗ một tướng địch đang bị Hất Lên Không, gây sát thương vật lý và giữ tất cả những kẻ địch cùng bị Hất Lên Không ở xung quanh trên không thêm một chút. Hồi đầy thanh Nhịp nhưng xóa hết cộng dồn của Tụ Bão. Sau đó các đòn chí mạng của Yasuo nhận lượng lớn Xuyên Giáp Cộng Thêm. Hồi chiêu: 70/50/30 giây.",
+    "expected_context": "## R — Trăng Trối\nDịch chuyển đến chỗ một tướng địch đang bị Hất Lên Không , gây sát thương vật lý và giữ tất cả những kẻ địch cùng bị Hất Lên Không ở xung quanh trên không thêm một chút. Hồi đầy thanh Nhịp nhưng xóa hết cộng dồn của Tụ Bão. Trong một khoảng thời gian sau đó, những đòn chí mạng của Yasuo sẽ nhận một lượng lớn Xuyên Giáp Cộng Thêm.\n\n**Hồi chiêu:** 70/50/30"
+  },
+  {
+    "question": "Nội tại Đường Kiếm Tuyệt Diệt của Aatrox có tác dụng gì?",
+    "expected_answer": "Thường kỳ, đòn đánh kế tiếp của Aatrox sẽ gây thêm sát thương phép và hồi máu, dựa trên máu tối đa của mục tiêu.",
+    "expected_context": "## Nội tại — Đường Kiếm Tuyệt Diệt\nThường kỳ, đòn đánh kế tiếp của Aatrox sẽ gây thêm sát thương phép và hồi máu, dựa trên máu tối đa của mục tiêu."
+  },
+  {
+    "question": "Hiệu ứng đòn đánh chí mạng trong nội tại Băng Tiễn của Ashe hoạt động như thế nào?",
+    "expected_answer": "Các phát bắn của Ashe làm chậm mục tiêu, khiến cô gây thêm sát thương lên chúng. Đòn chí mạng của Ashe sẽ không gây thêm sát thương nhưng chúng sẽ làm mục tiêu bị chậm hơn nhiều.",
+    "expected_context": "## Nội tại — Băng Tiễn\nCác phát bắn của Ashe làm chậm mục tiêu, khiến cô gây thêm sát thương lên chúng. Đòn chí mạng của Ashe sẽ không gây thêm sát thương nhưng chúng sẽ làm mục tiêu bị chậm hơn nhiều."
+  },
+  {
+    "question": "Trang bị Vô Cực Kiếm cung cấp những chỉ số gì và giá mua là bao nhiêu?",
+    "expected_answer": "Vô Cực Kiếm cung cấp 75 Sức Mạnh Công Kích, 25% Tỉ Lệ Chí Mạng, 30% Sát Thương Chí Mạng. Giá mua là 3500 vàng (bán lại 2450 vàng).",
+    "expected_context": "## Mô tả\n75 Sức Mạnh Công Kích 25% Tỉ Lệ Chí Mạng 30% Sát Thương Chí Mạng\n\n## Giá\n- Mua: 3500 vàng\n- Bán: 2450 vàng\n\n## Chỉ số\n- FlatCritChanceMod: 0.25\n- FlatPhysicalDamageMod: 75"
+  },
+  {
+    "question": "Chỉ số và nội tại của trang bị Mũ Phù Thủy Rabadon là gì?",
+    "expected_answer": "Mũ Phù Thủy Rabadon cung cấp 130 Sức Mạnh Phép Thuật và nội tại Tinh Hoa Phép Thuật giúp tăng tổng Sức Mạnh Phép Thuật thêm 30%. Giá mua là 3500 vàng.",
+    "expected_context": "## Mô tả\n130 Sức Mạnh Phép Thuật Tinh Hoa Phép Thuật Tăng tổng Sức Mạnh Phép Thuật thêm 30% .\n\n## Giá\n- Mua: 3500 vàng\n- Bán: 2450 vàng\n\n## Chỉ số\n- FlatMagicDamageMod: 130"
+  },
+  {
+    "question": "Trang bị Đồng Hồ Cát Zhonya có những chỉ số nào và kích hoạt Ngưng Đọng kéo dài bao lâu?",
+    "expected_answer": "Đồng Hồ Cát Zhonya cung cấp 105 Sức Mạnh Phép Thuật và 50 Giáp. Kích hoạt Ngưng Đọng Thời Gian đưa tướng vào trạng thái Ngưng Đọng trong 2.5 giây. Giá mua là 3250 vàng.",
+    "expected_context": "## Mô tả\n105 Sức Mạnh Phép Thuật 50 Giáp Ngưng Đọng Thời Gian Tiến vào trạng thái Ngưng Đọng trong 2.5 giây.\n\n## Giá\n- Mua: 3250 vàng\n- Bán: 2275 vàng\n\n## Chỉ số\n- FlatMagicDamageMod: 105\n- FlatArmorMod: 50"
+  },
+  {
+    "question": "Trang bị Tam Hợp Kiếm có giá mua bao nhiêu và mang lại những chỉ số gì?",
+    "expected_answer": "Tam Hợp Kiếm có giá mua 3333 vàng (bán 2333 vàng), cung cấp 36 Sức Mạnh Công Kích, 30% Tốc Độ Đánh, 333 Máu và 15 Điểm Hồi Kỹ Năng cùng hiệu ứng Kiếm Phép và Nhanh Lẹ.",
+    "expected_context": "## Mô tả\n36 Sức Mạnh Công Kích 30% Tốc Độ Đánh 333 Máu 15 Điểm Hồi Kỹ Năng Kiếm Phép Sau khi sử dụng một Kỹ Năng, Đòn Đánh tiếp theo gây thêm sát thương vật lý Khi Đánh Trúng . Nhanh Lẹ Đòn đánh cho 20 Tốc Độ Di Chuyển trong 2 giây.\n\n## Giá\n- Mua: 3333 vàng\n- Bán: 2333 vàng"
+  },
+  {
+    "question": "Phép bổ trợ Tốc Biến có thời gian hồi chiêu và tầm sử dụng là bao nhiêu?",
+    "expected_answer": "Phép bổ trợ Tốc Biến có thời gian hồi chiêu là 300 giây và tầm là 425, giúp dịch chuyển bạn một khoảng cách nhỏ hướng đến vị trí con trỏ.",
+    "expected_context": "## Mô tả\nDịch chuyển bạn đi một khoảng cách nhỏ hướng đến vị trí con trỏ.\n\n**Hồi chiêu:** 300\n\n**Tầm:** 425"
+  },
+  {
+    "question": "Phép bổ trợ Dịch Chuyển có thời gian hồi chiêu và tầm sử dụng bao nhiêu theo Riot Data Dragon?",
+    "expected_answer": "Phép bổ trợ Dịch Chuyển có thời gian hồi chiêu là 300 giây và tầm là 25000.",
+    "expected_context": "## Mô tả\nSau khi vận sức trong thoáng chốc, trở nên không thể chỉ định và bay đến một đơn vị đồng minh. Khi nâng cấp thành Dịch Chuyển Tự Do sẽ tăng mạnh tốc độ di chuyển.\n\n**Hồi chiêu:** 300\n\n**Tầm:** 25000"
+  },
+  {
+    "question": "Phép bổ trợ Thiêu Đốt có tác dụng gì và thời gian hồi chiêu là bao nhiêu?",
+    "expected_answer": "Thiêu Đốt gây sát thương chuẩn theo thời gian lên một tướng địch và giảm hiệu quả hồi máu của chúng trong thời gian tác dụng. Hồi chiêu: 180 giây, tầm: 600.",
+    "expected_context": "## Mô tả\nGây sát thương chuẩn theo thời gian lên một tướng địch và giảm hiệu quả hồi máu của chúng trong thời gian tác dụng.\n\n**Hồi chiêu:** 180\n\n**Tầm:** 600"
+  },
+  {
+    "question": "Patch 26.15 thay đổi chiêu Q Thundering Smash của Volibear như thế nào?",
+    "expected_answer": "Trong Patch 26.15, thời gian hồi chiêu của Q - Thundering Smash được giảm từ 14 / 13 / 12 / 11 / 10 xuống còn 12 / 11.5 / 11 / 10.5 / 10 giây.",
+    "expected_context": "####  Q - Thundering Smash\n  * **Cooldown** : 14 / 13 / 12 / 11 / 10 ⇒ **12 / 11.5 / 11 / 10.5 / 10**"
+  },
+  {
+    "question": "Chỉ số Sức mạnh Thích ứng của ngọc Jack of All Trades bị thay đổi ra sao trong Patch 26.15?",
+    "expected_answer": "Trong Patch 26.15, Sức mạnh Thích ứng (Adaptive Force) tại các mốc 5 và 10 chỉ số bị giảm từ 10 / 25 xuống còn 8 / 20.",
+    "expected_context": "* **Adaptive Force at 5 / 10 stat breakpoints** : 10 / 25 ⇒ **8 / 20**"
+  },
+  {
+    "question": "Trang bị Rìu Đen (Black Cleaver) được chỉnh sửa sức mạnh công kích và tốc độ chạy như thế nào trong Patch 26.16?",
+    "expected_answer": "Trong Patch 26.16, Sức mạnh công kích (Attack Damage) của Black Cleaver tăng từ 40 lên 45. Tốc độ di chuyển Fervor đổi từ 20 trong 2s thành 20 cho tướng cận chiến (Melee) và 10 cho tướng đánh xa (Ranged) trong 2s.",
+    "expected_context": "* **Attack Damage** : 40 ⇒ **45**\n  * **Fervor Move Speed** : 20 for 2s ⇒ **[20 Melee || 10 Ranged] for 2s**"
+  },
+  {
+    "question": "Patch 26.17 đã điều chỉnh tiêu hao mana chiêu Q và hồi chiêu W của Aurelion Sol như thế nào?",
+    "expected_answer": "Trong Patch 26.17, chiêu Q (Breath of Light) giảm tiêu hao mana mỗi giây từ 35 / 40 / 45 / 50 / 55 xuống 30 / 35 / 40 / 45 / 50. Chiêu W (Astral Flight) giảm hồi chiêu từ 22 / 20.5 / 19 / 17.5 / 16s xuống 22 / 20 / 18 / 16 / 14s.",
+    "expected_context": "####  Q - Breath of Light\n  * **Mana Cost Per Second** : 35 / 40 / 45 / 50 / 55 ⇒ **30 / 35 / 40 / 45 / 50**\n\n####  W - Astral Flight\n  * **Cooldown** : 22 / 20.5 / 19 / 17.5 / 16s ⇒ **22 / 20 / 18 / 16 / 14s**"
+  },
+  {
+    "question": "Thời gian duy trì cộng dồn Đòn Đánh Cuồng Nộ của Cuồng Đao Guinsoo thay đổi thế nào trong Patch 26.18?",
+    "expected_answer": "Trong Patch 26.18, thời gian duy trì cộng dồn Seething Strike Stack Duration của Guinsoo's Rageblade được tăng từ 3s lên 4s.",
+    "expected_context": "* **Seething Strike Stack Duration** : 3s ⇒ **4s**"
+  },
+  {
+    "question": "Patch 26.19 thay đổi nội tại The Relentless Storm của Volibear như thế nào?",
+    "expected_answer": "Trong Patch 26.19, nội tại The Relentless Storm của Volibear tăng tốc độ đánh mỗi cộng dồn từ 5% (+3% mỗi 100 AP) lên 5% (+4% mỗi 100 AP). Sát thương đòn đánh sét đổi từ 11 - 60 (+45% AP) thành 11 - 60 (+45% AP) (+20% bonus AD).",
+    "expected_context": "####  Passive - The Relentless Storm\n  * **Attack Speed per Stack** : 5% (+3% per 100 AP) ⇒ **5% (+4% per 100 AP)**\n  * **Lightning On-Hit Damage** : 11 - 60 (Levels 1-18) (+45% AP) ⇒ **11 - 60 (Levels 1-18) (+45% AP) (+20% bonus AD)**"
+  },
+  {
+    "question": "Thời gian hồi chiêu của Dịch Chuyển (Teleport) trong nhiệm vụ vai trò đường trên thay đổi như thế nào ở Patch 26.19?",
+    "expected_answer": "Trong Patch 26.19, hồi chiêu Free Teleport của Top Role Quest giảm từ 420 giây xuống 390 giây. Upgraded Unleashed Teleport cho Top giảm từ 330 - 240 giây xuống 300 - 210 giây; Non-Top Unleashed Teleport Cooldown giữ nguyên không đổi.",
+    "expected_context": "* **Top Role Quest's Free Teleport Cooldown** : 420 seconds ⇒ **390 seconds**\n  * **Top Role Quest's Upgraded Unleashed Teleport Cooldown** : 330 - 240 seconds ⇒ **300 - 210 seconds**\n  * **Non-Top Unleashed Teleport Cooldown** : 330 - 240 seconds ⇒ **Unchanged**"
+  },
+  {
+    "question": "Công thức nấu phở bò Hà Nội chuẩn vị truyền thống gồm những nguyên liệu gì?",
+    "expected_answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
+    "expected_context": "Nằm ngoài phạm vi dữ liệu League of Legends, Patch Notes và Data Dragon."
+  },
+  {
+    "question": "Lãi suất tiền gửi tiết kiệm ngân hàng kỳ hạn 12 tháng hiện nay là bao nhiêu?",
+    "expected_answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
+    "expected_context": "Nằm ngoài phạm vi dữ liệu League of Legends, Patch Notes và Data Dragon."
+  }
+]
